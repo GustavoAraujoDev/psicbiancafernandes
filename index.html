@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        background-color: #eed5b7;
+        color: white;
+      }
+      header img {
+        max-height: 80px;
+        transition: transform 0.3s;
+        position: absolute; /* ou 'relative' se preferir */
+        left: 15px;
+        top: 0; /* ajuste conforme necessário */
+      }
+
+      header img:hover {
+        transform: scale(1.1);
+      }
+      
+      .section1 {
+        background-color: #eed5b7;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .section2 {
+        background-color: #ffff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .section3 {
+        background-color: #eed5b7;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .section4 {
+        background-color: #ffff;
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+      .section5 {
+        background-color: #eed5b7;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .section6 {
+        background-color: #ffff;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .section1 .content1 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .section2 .content2 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .section3 .content3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+
+      .section5 .container{
+        display: grid;
+        grid-template-columns: 1fr; /* Faz o parágrafo e os cartões ocuparem a largura total */
+        gap: 20px; /* Espaçamento entre o parágrafo e os cartões */
+      }
+      .section5 .container .cards{
+        display: flex;
+        flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
+        justify-content: space-between; /* Ajusta o espaço entre os itens */
+      }
+      .section5 .container .cards .content5 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 1 1 30%;
+        background-color: #fff;
+        padding: 15px; 
+        margin: 15px;
+        border-radius: 20px;
+        box-sizing: border-box;
+      }
+      .section6 .content6 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .section1 .content1 .text-container1 {
+        display: grid;
+        flex: 1;
+        margin-right: 20px;
+        animation: fadeIn 1s;
+      }
+      .section3 .content3 .text-container3 {
+        display: grid;
+        flex: 1;
+        margin-right: 20px;
+        animation: fadeIn 1s;
+      }
+      .section5 .content5 .text-container5 {
+        display: grid;
+        flex: 1;
+        margin-right: 20px;
+        animation: fadeIn 1s;
+      }
+      .section6 .content6 .text-container6 {
+        display: grid;
+        flex: 1;
+        margin-right: 20px;
+        animation: fadeIn 1s;
+      }
+      .section1 .content1 .text-container1 h2 {
+        color: #d19793;
+      }
+
+      .section1 .content1 .text-container1 p {
+        color: #545b55;
+        margin-bottom: 0px;
+      }
+
+      .section2 h2 {
+        color: #d19793;
+      }
+
+      .section2 p {
+        color: #545b55;
+        margin-bottom: 0px;
+      }
+      .section3 .content3 .text-container3 h2 {
+        color: #d19793;
+      }
+
+      .section3 .content3 .text-container3 p {
+        color: #545b55;
+        margin-bottom: 0px;
+      }
+      .section4 h2 {
+        position: relative;
+        left: 10px;
+        color: #ccc7ae;
+      }
+
+      .section4 p {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #545b55;
+        margin-bottom: 7px;
+        margin-top: 10px;
+      }
+      .section5 .content5 .text-container5 h2 {
+        color: #d19793;
+      }
+
+      .section5 .content5 .text-container5 p {
+        color: #545b55;
+        margin-bottom: 0px;
+      }
+      .section5 .container p,h2 {
+        color: #d19793;
+       }
+       .section6 .content6 .text-container6 h2 {
+        color: #545b55;
+      }
+      .section6 .content6 .text-container6 span{
+        color: #d19793;
+      }
+
+      .section6 .content6 .text-container6 p {
+        color: #545b55;
+        margin-bottom: 0px;
+      }
+      .section6 .content6 .text-container6 img{
+        max-height: 80px;
+        transition: transform 0.3s;
+       
+      }
+      .section1 .content1 .image-container1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        height: 100%;
+        animation: fadeIn 1s;
+      }
+      .section1 .content1 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .section1 .content1 img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .section5 .content5 .image-container5 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        height: 100%;
+        animation: fadeIn 1s;
+      }
+      .section5 .content5 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .section5 .content5 img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .section6 .content6 .image-container6 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        height: 100%;
+        animation: fadeIn 1s;
+      }
+      .section6 .content6 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .section6 .content6 img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+      .section h2 {
+        margin-top: 0;
+      }
+      .section1 button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #d19793;
+        color: #545b55;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      .section1 button:hover {
+        background-color: #f6cec8;
+      }
+      .section4 button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #ccc7ae;
+        color: #545b55;
+        border: none;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;    
+        border-radius: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      .section4 button:hover {
+        background-color: #f6cec8;
+      }
+      .section5 button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #d19793;
+        color: #545b55;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      .section5 button:hover {
+        background-color: #f6cec8;
+      }
+      footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #eed587;
+        color: white;
+      }
+      footer img {
+        max-height: 50px;
+        transition: transform 0.3s;
+      }
+      footer img:hover {
+        transform: scale(1.1);
+      }
+      a {
+            text-decoration: none;
+        }
+        button:hover {
+            text-decoration: underline;
+        }
+      footer a button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #d19793;
+        color: #545b55;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+      footer button:hover {
+        background-color: #f6cec8;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @media (max-width: 768px) {
+        .section1 .content1, .section3 .content3, .section5 .cards, .section6 .content6 {
+          flex-direction: column;
+        }
+        .section1 .content1 .text-container1,
+        .section3 .content3 .image-container2 {
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" alt="Header Image" />
+    </header>
+    <main>
+      <!-- Primeira seção -->
+      <section class="section1">
+        <div class="content1">
+          <div class="text-container1">
+            <h2>Conquiste Sua Autoestima Emocional e Bem Esta</h2>
+            <p>Produtivadade</p>
+            <p>relacionamento saudavel</p>
+            <p>desenvolvimento de habito saudavel</p>
+            <a href="https://wa.me/5588999935987">
+                <button>Agendar sessão</button>
+            </a>
+          </div>
+          <div class="image-container1">
+            <img src="psic.png" alt="Imagem" />
+          </div>
+        </div>
+      </section>
+      <!-- Segunda seção -->
+      <section class="section2">
+        <div>
+          <h2>O que é Psicologia ??</h2>
+          <p>A psicologia é a ciência que estuda como pensamos, sentimos e nos comportamos. Um psicólogo é um profissional treinado para ajudar você a compreender melhor suas emoções, pensamentos e ações. Através de conversas confidenciais e estratégias personalizadas, podemos trabalhar juntos para enfrentar desafios, promover seu bem-estar emocional e desenvolver habilidades para uma vida mais equilibrada e satisfatória.</p>
+          <h2>Vantagens??</h2>
+          <p>Optar por um psicólogo significa ter acesso a um suporte especializado para lidar com desafios emocionais e comportamentais, em um ambiente confidencial e com estratégias personalizadas para promover seu bem-estar emocional e crescimento pessoal.</p>
+        </div>
+      </section>
+      <!-- Terceira seção -->
+      <section class="section3">
+        <div class="content3">
+          <div class="image-container3">
+            <img src="celebro.png" alt="Imagem" />
+          </div>
+          <div class="text-container3">
+            <h2>Não é Normal e Não é Saudável </h2>
+            <p>🔱  Esta Ansioso o Dia Todo </p>
+            <p>🔱  Esta Iritado o Dia Todo </p>
+            <p>🔱  Se Preocupar Com  a Opiniao Alheia o Tempo Todo </p>
+            <p>🔱  Esta Triste o Tempo Todo </p>
+            <p>🔱  Sensação de Cançaso o Tempo Todo </p>
+            <p>🔱  Esta em Luta o tempo todo </p>
+            <p>tais sintomas nao e com você, sao apenas um estafdo em que voce pode se controlar e equilibrar.</p>
+            <p>nao acumule suas dificuldades e tensoes do dia a dia cuide da sua saude mental </p>
+          </div>
+        </div>
+      </section>
+      <!-- Quarta seção -->
+      <section class="section4">
+        <div>
+          <h2>Agende sua sessão </h2>
+          <p>🕙 50 Min. | 💻 Tempo Real | 🔒 sigilo absoluto | 🏠 sem sair de casa </p>
+          <a href="https://wa.me/5588999935987">
+            <button>Agendar sessão</button>
+          </a>
+        </div>
+      </section>
+      <!-- Quinta seção -->
+      <section class="section5">
+        <div class="container">
+          <h2>Atendimento Online / Presencial</h2>
+          <div class="cards">
+            <div class="content5">
+                <div class="image-container5">
+                    <img src="individual.jfif" alt="Imagem" />
+                  </div>
+                <div class="text-container5">
+                  <h2>Terapia Individual</h2>
+                  <p>Oferecemos terapia individual online e presencial. Encontre apoio emocional e supere desafios pessoais em um ambiente seguro e confidencial. Agende sua consulta e inicie sua jornada para o bem-estar.</p>
+                  <a href="https://wa.me/5588999935987">
+                    <button>Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <div class="content5">
+                <div class="image-container5">
+                    <img src="casal.jfif" alt="Imagem" />
+                  </div>
+                <div class="text-container5">
+                  <h2>Terapia Casal</h2>
+                  <p>Oferecemos terapia de casal online e presencial. Fortaleça seu relacionamento e supere conflitos em um ambiente seguro e confidencial. Agende sua consulta e construa uma conexão mais harmoniosa e saudável.</p>
+                  <a href="https://wa.me/5588999935987">
+                    <button>Saiba Mais</button>
+                </a>
+                </div>
+              </div>
+              <div class="content5">
+                <div class="image-container5">
+                    <img src="familiar.jfif" alt="Imagem" />
+                  </div>
+                <div class="text-container5">
+                  <h2>Terapia Familiar</h2>
+                  <p>Oferecemos terapia familiar online e presencial. Melhore a comunicação e resolva conflitos em um ambiente seguro e confidencial. Agende sua consulta e fortaleça os laços familiares para uma convivência mais harmoniosa.</p>
+                  <a href="https://wa.me/5588999935987">
+                    <button>Saiba Mais</button>
+                  </a>
+                </div>
+              </div>
+              <p>Endereço - Av Bezerra de Menezes, 1123, Fortaleza, Ce</p>
+          </div>
+        </div>
+      </section>
+      <!-- Sexta seção -->
+      <section class="section6">
+        <div>
+          <div class="content6">
+            <div class="text-container6">
+            <img src="logo.png" alt="Imagem" />
+              <h2>Quem Sou Eu? <span>Bianca Fernandes.</span></h2>
+              <p>
+                <span>Abordagem:</span> Aplico a Psicologia Cognitivo-Comportamental para modificar padrões de pensamento e comportamento disfuncionais.
+                <span>Especialidades:</span> Trato ansiedade, depressão e transtornos relacionados ao estresse, com foco em mindfulness e técnicas baseadas em neurociência.
+                <span>Experiência:</span> Com mais de dez anos de prática clínica em ambientes hospitalares e consultório particular, ofereço um ambiente acolhedor para explorar desafios emocionais.
+                <span>Neurociência:</span> Utilizo descobertas neurocientíficas para desenvolver intervenções personalizadas que ajudam a regular emoções e promovem mudanças positivas.</p>
+            </div>
+            <div class="image-container6">
+              <img src="psic.png" alt="Imagem" />
+            </div>
+          </div>
+         
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="logo.png" alt="Footer Image" />
+      <div>
+        <a href="https://www.instagram.com/psic.biancafernandes/">
+        <button>instagram</button>
+      </a>
+        <a href="https://wa.me/5588999935987">
+            <button>WhatsApp</button>
+        </a>
+        
+      </div>
+    </footer>
+  </body>
+</html>
