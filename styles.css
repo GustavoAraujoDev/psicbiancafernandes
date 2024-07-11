@@ -64,6 +64,15 @@ header img:hover {
   opacity: 1;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
+  background-color: #eed5b7;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section7 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
   background-color: #ffff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -86,6 +95,11 @@ header img:hover {
 }
 
 .section5 .container {
+  display: flex;
+  flex-direction: column; /* Faz o parágrafo e os cartões ocuparem a largura total */
+  gap: 20px; /* Espaçamento entre o parágrafo e os cartões */
+}
+.section7 .container7 {
   display: flex;
   flex-direction: column; /* Faz o parágrafo e os cartões ocuparem a largura total */
   gap: 20px; /* Espaçamento entre o parágrafo e os cartões */
@@ -225,6 +239,15 @@ h2 {
 .section6 .content6 .text-container6 p {
   color: #545b55;
   margin-bottom: 0px;
+}
+.section7 .container7 h2 {
+  color: #d19793;
+  font-size: 29px;
+}
+.section7 .container7 p {
+  color: #545b55;
+  margin-bottom: 0px;
+  
 }
 .section6 .content6 .text-container6 img {
   max-height: 80px;
@@ -373,6 +396,23 @@ footer a button {
 }
 footer button:hover {
   background-color: #f6cec8;
+}
+.testimonial {
+  background-color: #fff;
+  border: 1px solid #f6cec8;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  animation: fadeIn 1s;
+}
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 @keyframes fadeIn {
   from {

@@ -29,3 +29,13 @@ document.addEventListener('scroll', function() {
         section6.style.transform = 'translateY(0)';
     }
 });
+document.addEventListener('scroll', function() {
+    const section7 = document.getElementById('section7');
+    const sectionPosition = section7.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.5;
+
+    if (sectionPosition < screenPosition) {
+        section7.style.opacity = '1';
+        section7.style.transform = 'translateY(0)';
+    }
+});
