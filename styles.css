@@ -109,6 +109,11 @@ header img:hover {
   flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
   justify-content: space-between; /* Ajusta o espaço entre os itens */
 }
+.section5 .container7 .cards7 {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
+  justify-content: space-between; /* Ajusta o espaço entre os itens */
+}
 .section5 .container .cards .content5 {
   display: flex;
   flex-direction: column;
@@ -400,11 +405,15 @@ footer button:hover {
 .testimonial {
   background-color: #fff;
   border: 1px solid #f6cec8;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 20px;
   box-sizing: border-box;
   display: flex;
+  
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 30%;
   position: relative;
   flex-direction: column;
   animation: fadeIn 1s;
