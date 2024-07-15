@@ -1,5 +1,5 @@
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Poppins';
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -13,9 +13,9 @@ header {
   color: white;
 }
 header img {
-  max-height: 80px;
+  max-height: 250px;
   transition: transform 0.3s;
-  position: absolute; /* ou 'relative' se preferir */
+   /* ou 'relative' se preferir */
   left: 15px;
   top: 0; /* ajuste conforme necessário */
 }
@@ -64,7 +64,7 @@ header img:hover {
   opacity: 1;
   transform: translateY(50px);
   transition: opacity 1s ease-out, transform 1s ease-out;
-  background-color: #eed5b7;
+  background-color: #ffff;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -146,7 +146,9 @@ header img:hover {
   animation: fadeIn 1s;
 }
 .section5 .content5 .text-container5 {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
   margin-right: 20px;
   animation: fadeIn 1s;
@@ -158,8 +160,9 @@ header img:hover {
   animation: fadeIn 1s;
 }
 .section1 .content1 .text-container1 h2 {
-  color: #d19793;
+  color: #545b55;
   font-size: 29px;
+  font-weight: bold;
 }
 
 .section1 .content1 .text-container1 p {
@@ -213,6 +216,7 @@ header img:hover {
 .section5 .content5 .text-container5 h2 {
   color: #d19793;
   font-size: 29px;
+  text-align: center;
 }
 
 .section5 .content5 .text-container5 p {
@@ -231,7 +235,7 @@ h2 {
 }
 .section6 .content6 .text-container6 h2 {
   font-size: 29px;
-  color: #545b55;
+  color: #d19793;
 }
 .section6 .content6 .text-container6 span {
   font-size: 29px;
@@ -255,7 +259,7 @@ h2 {
   
 }
 .section6 .content6 .text-container6 img {
-  max-height: 80px;
+  max-height: 160px;
   transition: transform 0.3s;
 }
 .section1 .content1 .image-container1 {
@@ -267,9 +271,10 @@ h2 {
   animation: fadeIn 1s;
 }
 .section1 .content1 img {
+  margin-top: 15px;
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  max-height: 500px;
+  border-radius: 50%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .section1 .content1 img:hover {
@@ -304,8 +309,8 @@ h2 {
 }
 .section6 .content6 img {
   max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+  max-height: 500px;
+  border-radius: 50%;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .section6 .content6 img:hover {
@@ -374,7 +379,7 @@ footer {
   color: white;
 }
 footer img {
-  max-height: 50px;
+  max-height: 250px;
   transition: transform 0.3s;
 }
 footer img:hover {
@@ -418,11 +423,17 @@ footer button:hover {
   flex-direction: column;
   animation: fadeIn 1s;
 }
+.botao5{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 .testimonial-header {
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
