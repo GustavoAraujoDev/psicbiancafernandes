@@ -540,4 +540,9 @@ footer button:hover {
   .container-logo6{
     margin-left: 20px;
   }
+  .section3 button {
+    position: absolute; /* Posição absoluta em relação ao container pai */
+    bottom: 30px; /* Centraliza verticalmente */
+    right: 35%; /* Centraliza horizontalmente */
+  }
 }
