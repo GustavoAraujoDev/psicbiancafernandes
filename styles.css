@@ -551,9 +551,5 @@ footer button:hover {
       margin-left: 20px;  
       }
       }
-      .section3 button {
-        position: absolute; /* Posição absoluta em relação ao container pai */
-        bottom: 30px; /* Centraliza verticalmente */
-        right: 33.33%; /* Centraliza horizontalmente */
-      }
+     
 }
