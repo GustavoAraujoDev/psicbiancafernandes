@@ -394,6 +394,7 @@ h2 {
 .section3 .content3 {
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   flex: 1 1 30%;
   margin: 25px;
