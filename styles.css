@@ -541,7 +541,7 @@ footer button:hover {
   
   .section3 button {
     position: absolute; /* Posição absoluta em relação ao container pai */
-    right: 37%;
+    right: 35%;
     bottom: 30px; /* Centraliza verticalmente */
     align-items: center;
 
