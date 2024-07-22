@@ -1,5 +1,7 @@
+
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -13,7 +15,7 @@ header {
   color: white;
 }
 header img {
-  max-height: 250px;
+  max-width: 250px;
   transition: transform 0.3s;
    /* ou 'relative' se preferir */
   left: 15px;
@@ -37,11 +39,7 @@ header img:hover {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.section3 {
-  background-color: #eed5b7;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+
 .section4 {
   opacity: 0;
   transform: translateY(50px);
@@ -88,17 +86,14 @@ header img:hover {
   flex-direction: column;
   flex-wrap: wrap;
 }
-.section3 .content3 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
 
 .section5 .container {
   display: flex;
   flex-direction: column; /* Faz o parágrafo e os cartões ocuparem a largura total */
   gap: 20px; /* Espaçamento entre o parágrafo e os cartões */
 }
+
 .section7 .container7 {
   display: flex;
   flex-direction: column; /* Faz o parágrafo e os cartões ocuparem a largura total */
@@ -109,6 +104,7 @@ header img:hover {
   flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
   justify-content: space-between; /* Ajusta o espaço entre os itens */
 }
+
 .section5 .container7 .cards7 {
   display: flex;
   flex-wrap: wrap; /* Permite que os itens quebrem a linha se necessário */
@@ -125,6 +121,7 @@ header img:hover {
   border-radius: 20px;
   box-sizing: border-box;
 }
+
 .section6 .content6 {
   display: flex;
   justify-content: space-between;
@@ -137,14 +134,7 @@ header img:hover {
   margin-right: 20px;
   animation: fadeIn 1s;
 }
-.section3 .content3 .text-container3 {
-  height: auto;
-  max-width: 100%;
-  display: grid;
-  flex: 1;
-  margin-right: 20px;
-  animation: fadeIn 1s;
-}
+
 .section5 .content5 .text-container5 {
   display: flex;
   flex-direction: column;
@@ -182,19 +172,7 @@ header img:hover {
   margin-bottom: 0px;
   font-size: 16px;
 }
-.section3 .content3 .text-container3 h2 {
-  color: #d19793;
-  font-size: 29px;
-}
 
-.section3 .content3 .text-container3 p {
-  color: #545b55;
-  margin-bottom: 0px;
-  position: relative;
-  max-width: 100%;
-  word-wrap: break-word;
-  font-size: 16px;
-}
 .section4 h2 {
   position: relative;
   left: 10px;
@@ -224,6 +202,7 @@ header img:hover {
   margin-bottom: 0px;
   font-size: 16px;
 }
+
 .section5 .container p{
   color: #d19793;
   font-size: 16px;
@@ -259,8 +238,17 @@ h2 {
   
 }
 .section6 .content6 .text-container6 img {
-  max-height: 160px;
+  max-width: 200px;
   transition: transform 0.3s;
+  border-radius: 0%;
+}
+.container-logo6 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
 .section1 .content1 .image-container1 {
   display: flex;
@@ -281,6 +269,7 @@ h2 {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .section5 .content5 .image-container5 {
   display: flex;
   align-items: center;
@@ -289,12 +278,14 @@ h2 {
   height: 100%;
   animation: fadeIn 1s;
 }
+
 .section5 .content5 img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .section5 .content5 img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -370,6 +361,83 @@ h2 {
 .section5 button:hover {
   background-color: #f6cec8;
 }
+
+.section5 button:hover {
+  background-color: #f6cec8;
+}
+
+/* ==============================
+   SEÇÃO 3
+   ============================== */
+
+/* Estilos da Seção 3 (section3) */
+.section3 {
+  background-color: #eed5b7;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section3 .container3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section3 .container3 .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section3 .content3 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1 1 30%;
+  margin: 25px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: relative; /* Para posicionar o botão de forma relativa */
+}
+
+.section3 .image-container3 {
+  position: relative; /* Para posicionar o botão de forma relativa */
+  overflow: hidden; /* Para a imagem ocupar todo o espaço da div */
+}
+
+.section3 .image-container3 img {
+  width: 100%; /* Para a imagem ocupar toda a largura da div */
+  height: auto; /* Para manter a proporção da imagem */
+  display: block; /* Para garantir que a imagem se comporte como um bloco */
+  border-radius: 10px; /* Bordas arredondadas para a imagem, se desejado */
+}
+
+.section3 .container3 h2{
+  color: #d19793;
+}
+
+.section3 button {
+  position: absolute; /* Posição absoluta em relação ao container pai */
+  bottom: 30px; /* Centraliza verticalmente */
+  right: 39%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza completamente o botão */
+  background-color: #d19793;
+  color: #545b55;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: increaseSize 2s infinite;
+}
+
+.section3 button:hover {
+  background-color: #f6cec8;
+  text-decoration: none;
+}
+
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -379,7 +447,7 @@ footer {
   color: white;
 }
 footer img {
-  max-height: 250px;
+  width: 250px;
   transition: transform 0.3s;
 }
 footer img:hover {
@@ -444,9 +512,17 @@ footer button:hover {
     transform: translateY(0);
   }
 }
+@keyframes increaseSize {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.25);
+  }
+}
 @media (max-width: 768px) {
   .section1 .content1,
-  .section3 .content3,
+  .section3 .cards,
   .section5 .cards,
   .section6 .content6 {
     flex-direction: column;
@@ -454,5 +530,14 @@ footer button:hover {
   .section1 .content1 .text-container1,
   .section3 .content3 .image-container2 {
     margin-right: 0;
+  }
+  .section4 p{
+    margin-top: 22px;
+  }
+  footer{
+    flex-direction: column;
+  }
+  .container-logo6{
+    margin-left: 20px;
   }
 }
