@@ -545,4 +545,9 @@ footer button:hover {
     bottom: 30px; /* Centraliza verticalmente */
     right: 30%; /* Centraliza horizontalmente */
   }
+  @media (max-width: 768px){
+    .container-logo6{
+      margin-left: 20px;
+    }
+      }
 }
