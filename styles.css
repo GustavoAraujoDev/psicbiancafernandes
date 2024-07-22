@@ -540,7 +540,7 @@ footer button:hover {
   }
   
   .section3 button {
-    position: relative; /* Posição absoluta em relação ao container pai */
+    position: absolute; /* Posição absoluta em relação ao container pai */
     right: 37%;
     bottom: 30px; /* Centraliza verticalmente */
     align-items: center;
