@@ -547,10 +547,16 @@ footer button:hover {
     align-items: center;
 
   }
-  @media (max-width: 550px){
+  @media (max-width: 450px){
     .container-logo6{
       margin-left: 20px;  
       }
-      }
+      .section3 button {
+        position: absolute; /* Posição absoluta em relação ao container pai */
+        right: 30%;  
+        bottom: 30px; /* Centraliza verticalmente */
+        align-items: center;
+    }
      
+}
 }
